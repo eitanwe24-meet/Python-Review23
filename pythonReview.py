@@ -17,15 +17,29 @@ def add_comment(video,username,comments_text):
 	return video
 
 
+def print_video(video): #Bonus
+	print(video["title"])
+	print(video["description"])
+	print(f"likes: {video['likes']}, dislikes: {video['dislikes']}")
+	i = 1
+	for comment in video["comments"]:
+		print(f"{i}. {comment}")
+	# title
+	# description
+	# likes: 4, dislikes: 0
+	# comments:
+	# 	1. 
+	# 	2
+	# 	3
+	# 	4
+
+
 a = create_youtube_video("hello","jjwboe")
-print(a) 
 a = like(a)
-print(a)
 a = dislike(a)
-print(a)
 a = add_comment(a,"eitan","commentss")
-print(a)
 for i in range(495):
 	like(a)
-print(a)
 	
+
+print_video(a)
